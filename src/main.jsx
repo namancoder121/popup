@@ -1,34 +1,32 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import { Service } from './components/Service.jsx'
-import { Price } from './components/Price.jsx'
-import { Contact } from './components/Contact.jsx'
-import Task7 from './components/Task7.jsx'
-import { Parent } from './components/Task8/Parent.jsx'
-import ClassParent from './components/Task8/ClassParent.jsx'
-import ClassCounter from './components/Task8/ClassCounter.jsx'
-import Popup from './components/Task9/Popup.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Popup from "./components/PopUp/Popup.jsx";
+import App from "../App.jsx";
+import UseEffect from "./components/UseEffect/UseEffect.jsx";
+import UseState from "./components/UseState/UseState.jsx";
+import UseCallback from "./components/Callback/UseCallback.jsx";
+import Use_Memo from "./components/Memo/Use_Memo.jsx";
+import Use_Reducer from "./components/Reducer/Use_Reducer.jsx";
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-{/* <BrowserRouter>
-<Routes>
-  <Route path='/' element={    <App />}/>
-  <Route path='/service' element={<Service/>}/>
-  <Route path='/price' element={<Price/>}/>
-  <Route path='/contact' element={<Contact/>}/>
-  <Route/>
-  <Route/>
-</Routes>
-</BrowserRouter> */}
-{/* <Task7/>  task date 13/02/2024 */}
-{/* <Parent/> */}
-{/* <ClassParent/> */}
-{/* <ClassCounter/> */}
-<Popup/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App/>} />
+        <Route path="/popup" element={<Popup/>} />
+        <Route path="/useeffect" element={<UseEffect/>} />
+        <Route path="/usestate" element={ <UseState/>} />
+        <Route path="/usecallback" element={ <UseCallback/>} />
+        <Route path="/usememo" element={ <Use_Memo/>} />
+        <Route path="/usereducer" element={<Use_Reducer/> } />
 
-  </React.StrictMode>,
-)
+        
+
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
